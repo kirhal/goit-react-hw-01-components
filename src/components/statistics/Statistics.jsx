@@ -1,45 +1,23 @@
 import PropTypes from 'prop-types';
 
-export default function Statistics({
-  username,
-  tag,
-  location,
-  avatar,
-  stats: { followers, views, likes },
-}) {
+export default function Statistics({ title, stats }) {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <section class="statistics">
+      {title && <h2 class="title">Upload stats</h2>}
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity"> {followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity"> {views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity"> {likes}</span>
-        </li>
+      <ul class="stat-list">
+        {stats.map(elem => (
+          <li class="item" key={elem.id}>
+            <span class="label">{elem.label}</span>
+            <span class="percentage">{elem.percentage}</span>
+          </li>
+        ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
 Statistics.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
 };
