@@ -26,9 +26,10 @@
 .transaction-history td {
   padding: 5px 0;
 }
-.transaction-history tr:nth-child(2n) {
+.transaction-history tbody tr:nth-child(2n) {
   background-color: rgb(240, 240, 240);
 }
+
 .transaction-history tr > td:nth-child(1) {
   display: block;
   text-align: left;
