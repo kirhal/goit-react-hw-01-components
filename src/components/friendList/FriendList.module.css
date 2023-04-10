@@ -17,8 +17,12 @@
 }
 .status {
   width: 20px;
-  height: 20px;  
+  height: 20px;
   border-radius: 50%;
+  background-color: rgb(194, 60, 60);
+}
+.online {
+  background-color: rgb(57, 161, 71);
 }
 .avatar {
   margin-left: 20px;

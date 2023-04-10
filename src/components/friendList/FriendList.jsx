@@ -19,21 +19,7 @@ export default function FriendList({ friends }) {
 function FriendListItem({ avatar, name, online }) {
   return (
     <li className={css.item}>
-      {online ? (
-        <span
-          className={css.status}
-          style={{
-            backgroundColor: '#f05f5f',
-          }}
-        ></span>
-      ) : (
-        <span
-          className={css.status}
-          style={{
-            backgroundColor: '#93c47d',
-          }}
-        ></span>
-      )}
+      <span className={`${css.status} ${online && css.online}`}></span>
       <img className={css.avatar} src={avatar} alt="User avatar" width="40" />
       <p className={css.name}>{name}</p>
     </li>
