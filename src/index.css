@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(218, 214, 211);
 }
 
 code {
@@ -16,4 +17,9 @@ code {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
 }
